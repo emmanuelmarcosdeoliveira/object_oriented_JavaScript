@@ -31,9 +31,17 @@ function Celular(tipo, fabricante, modelo) {
   Telefone.call(this, tipo);
 }
 
+function Fixo(tipo, fabricante, modelo) {
+  this.fabricante = fabricante;
+  this.modelo = modelo;
+  Telefone.call(this, tipo)
+}
+
 const telefoneDaMaria = new Celular("Movel", "Motorola", "Light");
 const telefoneDoEmmanuel = new Celular("Movel", "Sansung", "S22");
-const telefoneDoJoao = new Celular("Movel", "Xiaomi 13 lite");
-
+const telefoneDoJoao = new Fixo( "Fixo","Anatel","Parede");
 console.log(telefoneDaMaria);
-telefoneDaMaria.fazLigacao()
+console.log(telefoneDoJoao);
+
+telefoneDaMaria.fazLigacao();
+telefoneDoJoao.fazLigacao()
